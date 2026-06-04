@@ -1,5 +1,4 @@
 import argparse
-from services.ai_parser_service import AIParserService
 from cli.commands import (
     add_alarm,
     list_alarms,
@@ -60,18 +59,27 @@ elif args.command == "remove":
 
 elif args.command == "run":
     run_scheduler()
+
 elif args.command == "ai-add":
 
-    parser = AIParserService()
+    try:
 
-    alarm = parser.parse(
-        args.text
-    )
+        from services.ai_parser_service import (
+            AIParserService
+        )
 
-    add_alarm(
-        alarm["time"],
-        alarm["label"]
-    )
+        ai_service = AIParserService()
 
+        alarm = ai_service.parse(
+            args.text
+        )
+
+        add_alarm(
+            alarm["time"],
+            alarm["label"]
+        )
+
+    except Exception as e:
+        print(e)
 else:
     parser.print_help()

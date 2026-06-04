@@ -1,7 +1,7 @@
 import os
 import time
 import requests
-
+from services.notification_service import NotificationService
 from datetime import datetime
 from dotenv import load_dotenv
 
@@ -10,22 +10,8 @@ load_dotenv()
 
 class SchedulerService:
 
-    def send_push_notification(self, alarm):
-
-        resp = requests.post(
-            "https://api.pushover.net/1/messages.json",
-            data={
-                "token": os.getenv("PUSHOVER_APP_TOKEN"),
-                "user": os.getenv("PUSHOVER_USER_KEY"),
-                "title": "Alarm Clock",
-                "message": f"{alarm.label} ({alarm.time})"
-            }
-        )
-        print(f"Push notification sent: {resp.status_code}")
-        print(f"Response: {resp.text}")
-
     def run(self, alarms):
-
+        notification_service = (NotificationService())
         print("Monitoring alarms...")
 
         while True:
@@ -40,7 +26,9 @@ class SchedulerService:
                         "afplay /System/Library/Sounds/Glass.aiff"
                     )
 
-                    self.send_push_notification(alarm)
+                    notification_service.send_push_notification(
+                        alarm
+                    )
 
                     print(
                         f"\n⏰ Alarm Triggered: "

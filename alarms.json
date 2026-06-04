@@ -46,5 +46,35 @@
         "time": "23:55",
         "label": "movie notification",
         "daily": true
+    },
+    {
+        "id": 11,
+        "time": "09:24",
+        "label": "gym",
+        "daily": true
+    },
+    {
+        "id": 12,
+        "time": "09:27",
+        "label": "breakfast",
+        "daily": true
+    },
+    {
+        "id": 13,
+        "time": "09:32",
+        "label": "breakfast",
+        "daily": true
+    },
+    {
+        "id": 14,
+        "time": "09:33",
+        "label": "breakfast",
+        "daily": true
+    },
+    {
+        "id": 15,
+        "time": "09:35",
+        "label": "gym",
+        "daily": true
     }
 ]
