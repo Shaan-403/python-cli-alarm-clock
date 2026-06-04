@@ -6,75 +6,15 @@
         "daily": true
     },
     {
-        "id": 4,
-        "time": "21:49",
-        "label": "Dinnersound",
+        "id": 2,
+        "time": "08:00",
+        "label": "Breakfast",
         "daily": true
     },
     {
-        "id": 5,
-        "time": "21:57",
-        "label": "Gym",
-        "daily": true
-    },
-    {
-        "id": 6,
-        "time": "23:26",
-        "label": "Gympushover",
-        "daily": true
-    },
-    {
-        "id": 7,
-        "time": "23:30",
-        "label": "mpushover",
-        "daily": true
-    },
-    {
-        "id": 8,
-        "time": "23:36",
-        "label": "mpushover",
-        "daily": true
-    },
-    {
-        "id": 9,
-        "time": "07:30",
-        "label": "gym",
-        "daily": true
-    },
-    {
-        "id": 10,
-        "time": "23:55",
-        "label": "movie notification",
-        "daily": true
-    },
-    {
-        "id": 11,
-        "time": "09:24",
-        "label": "gym",
-        "daily": true
-    },
-    {
-        "id": 12,
-        "time": "09:27",
-        "label": "breakfast",
-        "daily": true
-    },
-    {
-        "id": 13,
-        "time": "09:32",
-        "label": "breakfast",
-        "daily": true
-    },
-    {
-        "id": 14,
-        "time": "09:33",
-        "label": "breakfast",
-        "daily": true
-    },
-    {
-        "id": 15,
-        "time": "09:35",
-        "label": "gym",
-        "daily": true
+        "id": 3,
+        "time": "09:00",
+        "label": "Meeting with team",
+        "daily": false
     }
 ]

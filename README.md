@@ -130,3 +130,24 @@ usability.
 
 -   DESIGN.md
 -   AI_USAGE.md
+
+## Optional: Configure AI and Mobile Notifications
+
+The core CLI functionality works without any additional configuration.
+
+To enable the optional **AI-powered natural language parser (`ai-add`)** and **mobile notifications**, create a `.env` file in the project root directory and add the following values:
+
+```text
+OPENAI_API_KEY=your_openai_api_key
+
+PUSHOVER_APP_TOKEN=your_pushover_app_token
+PUSHOVER_USER_KEY=your_pushover_user_key
+```
+
+Example:
+
+```bash
+python alarm.py ai-add "Wake me up at 7:30 AM for gym"
+```
+
+If the `.env` file is not configured, the standard CLI commands (`add`, `list`, `remove`, and `run`) will continue to function normally.
