@@ -22,9 +22,9 @@ class SchedulerService:
 
                 if alarm.time == current_time:
 
-                    os.system(
-                        "afplay /System/Library/Sounds/Glass.aiff"
-                    )
+                    # os.system(
+                    #     "afplay /System/Library/Sounds/Glass.aiff"
+                    # )
 
                     notification_service.send_push_notification(
                         alarm
